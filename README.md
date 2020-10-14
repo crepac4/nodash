@@ -1,5 +1,5 @@
 # nodash
-This is an extension to loads for node
+An 'extension' of lodash for node
 
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 ![GitHub last commit](https://img.shields.io/github/last-commit/crepac4/nodash)
