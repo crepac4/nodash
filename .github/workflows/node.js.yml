@@ -24,6 +24,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - name: Codecov
+      uses: codecov/codecov-action@v1.0.13
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
