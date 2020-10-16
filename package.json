@@ -7,7 +7,7 @@
     "test": "mocha",
     "lint": "./node_modules/.bin/eslint test/*.js src/*.js",
     "lint-fix": "./node_modules/.bin/eslint test/*.js src/*.js --fix",
-    "coverage": "nyc --reporter=lcov --reporter=text npm run test"
+    "coverage": "nyc --reporter=lcov --reporter=config npm run test"
   },
   "repository": {
     "type": "git",
