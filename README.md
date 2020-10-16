@@ -4,6 +4,7 @@ An 'extension' of lodash for node
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 ![GitHub last commit](https://img.shields.io/github/last-commit/crepac4/nodash)
 ![Node.js CI](https://github.com/crepac4/nodash/workflows/Node.js%20CI/badge.svg)
+![Node.js CI](https://github.com/crepac4/nodash/workflows/Node.js%20CI/badge.svg?event=check_suite)
 
 ## Description
 
