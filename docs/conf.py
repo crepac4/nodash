@@ -46,7 +46,7 @@ templates_path = ['_templates']
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
-js_source_path = '../src/'
+js_source_path = '../src/index.js'
 primary_domain = 'js'
 # -- Options for HTML output -------------------------------------------------
 

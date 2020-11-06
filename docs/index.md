@@ -21,3 +21,22 @@ An extension of lodash with functions and utilities that I use for nodejs.
 ## What does 'nodash' mean
 
 lodash - nodash - node dash.
+
+
+```eval_rst
+.. note:: This library is at it's very early stages. Any suggestions are welcome.
+.. js:autofunction:: writeAsCSV
+.. js:autofunction:: isObject
+.. js:autofunction:: isGenerator
+.. js:autofunction:: isClass
+.. js:autofunction:: isFunction
+.. js:autofunction:: isGeneratorFunction
+.. js:autofunction:: isAsyncFunction
+.. js:autofunction:: isAsyncGenerator
+.. js:autofunction:: isArray
+.. js:autofunction:: isUrl
+.. js:autofunction:: get
+.. js:autofunction:: uniqSortBy
+.. js:autofunction:: diewhen
+.. js:autofunction:: die
+```
