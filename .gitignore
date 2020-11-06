@@ -103,3 +103,6 @@ dist
 coverage
 .nyc_output
 .vscode
+docs/_build
+docs/_static
+docs/_templates

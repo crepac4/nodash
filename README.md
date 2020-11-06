@@ -5,6 +5,8 @@ An 'extension' of lodash for node
 ![GitHub last commit](https://img.shields.io/github/last-commit/crepac4/nodash)
 ![Node.js CI](https://github.com/crepac4/nodash/workflows/Node.js%20CI/badge.svg)
 ![nycrc config on GitHub](https://img.shields.io/nycrc/crepac4/nodash?config=.nycrc.json)
+[![Documentation Status](https://readthedocs.org/projects/nodash/badge/?version=latest)](https://nodash.readthedocs.io/en/latest/?badge=latest)
+
 
 ## Description
 

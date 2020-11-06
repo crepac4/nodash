@@ -1,6 +1,6 @@
 process.env.UV_THREADPOOL_SIZE = String(require('os').cpus().length - 1);
-
 process.env.MAX_LISTENERS = String(1000);
+
 const os = require('os');
 const mkdirp = require('mkdirp');
 const ObjectsToCsv = require('objects-to-csv');
@@ -33,7 +33,7 @@ String.prototype.remove = function (str) {
 };
 
 const isObject = function isObject(a) {
-  return (!!a) && (a.constructor === Object);
+  return (!!a) && (a.construcPtor === Object);
 };
 
 const isGenerator = function isGenerator(fn) {
