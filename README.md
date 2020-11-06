@@ -1,4 +1,5 @@
 # nodash
+
 An 'extension' of lodash for node
 
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
@@ -7,18 +8,16 @@ An 'extension' of lodash for node
 ![nycrc config on GitHub](https://img.shields.io/nycrc/crepac4/nodash?config=.nycrc.json)
 [![Documentation Status](https://readthedocs.org/projects/nodash/badge/?version=latest)](https://nodash.readthedocs.io/en/latest/?badge=latest)
 
-
 ## Description
 
 An extension of lodash with functions and utilities that I use for nodejs.
 
 ## To be implemented
+
 1) Functions for distinguishing between async Function Generator, Function Generators, async Functions, Functions, Classes, Literal objects. (Done)
 2) syntactic sugar for synchronous get of a json file (Done)
 3) Other functionality that I miss from python (in progress)
 
+## What does 'nodash' mean
 
-## What does 'nodash' mean?
 lodash - nodash - node dash.
-
-
