@@ -21,4 +21,3 @@ An extension of lodash with functions and utilities that I use for nodejs.
 ## What does 'nodash' mean
 
 lodash - nodash - node dash.
-
