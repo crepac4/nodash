@@ -19,7 +19,7 @@ An extension of lodash with functions and utilities that I use for nodejs.
 3) Other functionality that I miss from python (in progress)
 
 ## Examples 
-  Visit the [documentation](https://nodash.readthedocs.io/en/latest/) for all usage examples of the library!
+  Visit the [documentation](https://nodash.readthedocs.io/en/latest/) for all usage examples of the library, or check the jsdocs on index.js
 
 ## What does 'nodash' mean
 
