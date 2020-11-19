@@ -11,6 +11,9 @@ const fss = require('fs-extra');
 
 /** 
 * Write a literal object to file as a comma-separated values (CSV) file. Like standard writeFile, writeAsCSV() is Async
+* @example
+* let jsondata = {id: 1, first_name: 'john', last_name: 'white'}
+* nodash.writeAsCSV(`${__dirname}/tmp/data.csv`, jsondata); // returns a promise
 * @param {String} p - Absolute path to the location of the comma-separated values (CSV) file.
 * @param {Object} data - The literal Object to save as a comma-separated values (CSV) file.
 * @return {Promise} Void - Represents the completion of an asynchronous operation.
@@ -29,17 +32,37 @@ const writeAsCSV = async function (p, data, _debug) {
   if (_debug) console.log(data);
 };
 
+
+/** 
+* This is a monkeypatch that embeds the ability to use replace for all instances of a substring instead of just the first one (similar to python's replace)
+* @example
+* require('nodash')
+* const tempString = 'over the rainbow, over and over again'
+* tempString.replaceAll('over','oooover')
+* console.log(tempString) // => 'oooover the rainbow, oooover and oooover again'
+*/
 String.prototype.replaceAll = function (search, replacement) {
   const target = this;
   return target.replace(new RegExp(search, 'g'), replacement);
 };
 
+/** 
+* This is a monkeypatch that embeds the ability to use remove for all instances of a substring.
+* @example
+* require('nodash')
+* const tempString = 'over the rainbow, over and over again'
+* tempString.remove('again')
+* console.log(tempString) // => 'over the rainbow, over and over'
+*/
 String.prototype.remove = function (str) {
   return this.replaceAll(str, '');
 };
 
 /** 
 * Determines if a value is an Object. 
+* @example
+* let arr = [1,3,4,5]
+* isObject(arr) //returns true
 * @param {any} a - The value to be checked.
 * @return {Boolean} Returns True if the value is an Object. False Otherwise. NOTE: Object does not nessesarity mean only a literal object in javascript.
 */
@@ -49,6 +72,9 @@ const isObject = function isObject(a) {
 
 /** 
 * Determines if a value is a function generator. 
+* @example
+* function *test(){}
+* isGenerator(test) //returns true
 * @param {any} fn - The value to be checked.
 * @return {Boolean} Returns True if the value is a function generator. False Otherwise.
 */
@@ -58,6 +84,9 @@ const isGenerator = function isGenerator(fn) {
 
 /** 
 * Determines if a value is a class. 
+* @example
+* class Test{}
+* isClass(test) //returns true
 * @param {any} fn - The value to be checked.
 * @return {Boolean} Returns True if the value is a class. False Otherwise.
 */
@@ -67,6 +96,9 @@ const isClass = function isClass(fn) {
 
 /** 
 * Determines if a value is a function. 
+* @example
+* function test(){}
+* isFunction(test) //returns true
 * @param {any} fn - The value to be checked.
 * @return {Boolean} Returns True if the value is a function. False Otherwise.
 */
@@ -85,6 +117,9 @@ const isGeneratorFunction = function isGeneratorFunction(fn) {
 
 /** 
 * Determines if a value is an asynchronous function. 
+* @example
+* async function test(){}
+* isAsyncFunction(test) //returns true
 * @param {any} fn - The value to be checked.
 * @return {Boolean} Returns True if the value is an asynchronous function. False Otherwise.
 */
@@ -94,6 +129,9 @@ const isAsyncFunction = function isAsyncFunction(fn) {
 
 /** 
 * Determines if a value is an asynchronous function generator. 
+* @example
+* async function* test(){}
+* isAsyncGenerator(test) //returns true
 * @param {any} fn - The value to be checked.
 * @return {Boolean} Returns True if the value is an asynchronous function generator. False Otherwise.
 */
@@ -103,6 +141,9 @@ const isAsyncGenerator = function isAsyncGenerator(fn) {
 
 /** 
 * Determines if a value is an array. 
+* @example
+* let arr = [1,2,3,4,5]
+* isArray(arr) //returns true
 * @param {any} a - The value to be checked.
 * @return {Boolean} Returns True if the value is an array. False Otherwise.
 */
@@ -112,6 +153,9 @@ const isArray = function isArray(a) {
 
 /** 
 * Determines if a string is a valid url. 
+* @example
+* let test = 'https://google.com'
+* isAsyncGenerator(test) //returns true
 * @param {any} a - The string to be checked.
 * @return {Boolean} Returns True if the value is a valid url. False Otherwise.
 */
@@ -121,6 +165,10 @@ const isUrl = function isUrl(a) {
 
 /** 
 * Synchronous get request. Only to be used at the start of the program so as to avoid crashes and other bottlenecks.
+* @example
+* async function* test(){}
+* let test_url = https://sometesturl.com/api/someendpoint.json
+* req('GET', test_url) //returns parsed json response
 * @param {string} thing - A string containing the address from which to make the get request.
 * @return {Object} Returns the result as a literal Object (JSON) - Default Encoding: utf8
 */
@@ -172,7 +220,7 @@ module.exports = {
   isFunction,
   isGeneratorFunction,
   isAsyncGenerator,
-   isObject,
+  isObject,
   isArray,
   isUrl,
   die,
