@@ -28,7 +28,7 @@ copyright = '2020, Crepac4'
 author = 'Crepac4'
 
 # The full version, including alpha/beta/rc tags
-release =  '0.0.1'
+release =  '1.1.0a'
 
 
 # -- General configuration ---------------------------------------------------
