@@ -18,6 +18,9 @@ An extension of lodash with functions and utilities that I use for nodejs.
 2) syntactic sugar for synchronous get of a json file (Done)
 3) Other functionality that I miss from python (in progress)
 
+## Examples 
+  All usage examples of the library is over at nodash.readthedocs.io !
+
 ## What does 'nodash' mean
 
 lodash - nodash - node dash.
